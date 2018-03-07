@@ -1,0 +1,48 @@
+.testPane { 
+    color: black; 
+    padding: 10px; 
+    text-align: left;
+    width: 600px;
+}
+
+.menu { 
+    color: black; 
+    padding: 3px; 
+    text-align: center; 
+    border: 1px black; 
+    margin: 0 auto;
+    font-family: sans-serif; 
+    font-size: 16px;
+}
+
+.panelGrid { 
+    color: black; 
+    padding: 3px; 
+    text-align: left; 
+    border-radius: 30px;
+    border-color: red;
+    border: black ridge; 
+    margin: 0 auto;
+}
+
+.preformatted {
+    white-space: pre-wrap;
+}
+
+.header {
+    color: black; 
+    padding: 3px; 
+    text-align: center; 
+    margin: 0 auto;
+    font-family: sans-serif; 
+    font-size: 24px;
+}
+
+.select {
+    color: black; 
+    padding: 3px; 
+    text-align: center; 
+    margin: 0 auto;
+    font-family: sans-serif; 
+    font-size: 24px;
+}

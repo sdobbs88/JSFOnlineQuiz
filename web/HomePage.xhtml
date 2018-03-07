@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.  
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Introduction to Java Programming</title>
+        <h:outputStylesheet library="css" name="selfTest.css"  />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <div style="text-align: center; margin-bottom: 0em">
+        <h3 style="text-align: center; margin-bottom: 0.2em; color: navy; font-family: Verdana, Helvetica, sans-serif">
+            Introduction to Java Programming, Tenth Edition, 
+            <a href="http://www.cs.armstrong.edu/liang" style="text-decoration: none; color: green">Y. Daniel Liang</a></h3>
+    </div>
+    <h:body style="background-color: infobackground;"> 
+        <div style="margin-top:0.2em;  text-align: center;">This quiz is for students to practice. A large number of additional quizzes are available for instructors from the Instructor's Resource Website.</div>
+        <!-- main content -->        
+        <h:form class="menu">
+            <div class="select">Select a Chapter: </div>
+            <h:selectOneMenu value="#{mcBean.chapterSelection}">
+                <f:selectItem itemValue ="1" itemLabel="Chapter 1"/>
+                <f:selectItem itemValue ="2" itemLabel="Chapter 2"/>
+                <f:selectItem itemValue ="3" itemLabel="Chapter 3"/>
+                <f:selectItem itemValue ="4" itemLabel="Chapter 4"/>
+                <f:selectItem itemValue ="5" itemLabel="Chapter 5"/>
+                <f:selectItem itemValue ="6" itemLabel="Chapter 6"/>
+                <f:selectItem itemValue ="7" itemLabel="Chapter 7"/>
+                <f:selectItem itemValue ="8" itemLabel="Chapter 8"/>
+                <f:selectItem itemValue ="9" itemLabel="Chapter 9"/>
+                <f:selectItem itemValue ="10" itemLabel="Chapter 10"/>
+                <f:selectItem itemValue ="11" itemLabel="Chapter 11"/>
+                <f:selectItem itemValue ="12" itemLabel="Chapter 12"/>
+                <f:selectItem itemValue ="13" itemLabel="Chapter 13"/>
+                <f:selectItem itemValue ="14" itemLabel="Chapter 14"/>
+                <f:selectItem itemValue ="15" itemLabel="Chapter 15"/>
+                <f:selectItem itemValue ="16" itemLabel="Chapter 16"/>
+                <f:selectItem itemValue ="17" itemLabel="Chapter 17"/>
+                <f:selectItem itemValue ="18" itemLabel="Chapter 18"/>
+                <f:selectItem itemValue ="19" itemLabel="Chapter 19"/>
+                <f:selectItem itemValue ="20" itemLabel="Chapter 20"/>
+                <f:selectItem itemValue ="21" itemLabel="Chapter 21"/>
+                <f:selectItem itemValue ="22" itemLabel="Chapter 22"/>
+                <f:selectItem itemValue ="23" itemLabel="Chapter 23"/>
+                <f:selectItem itemValue ="24" itemLabel="Chapter 24"/>
+                <f:selectItem itemValue ="25" itemLabel="Chapter 25"/>
+                <f:selectItem itemValue ="26" itemLabel="Chapter 26"/>
+                <f:selectItem itemValue ="27" itemLabel="Chapter 27"/>
+                <f:selectItem itemValue ="28" itemLabel="Chapter 28"/>
+                <f:selectItem itemValue ="29" itemLabel="Chapter 29"/>
+                <f:selectItem itemValue ="30" itemLabel="Chapter 30"/>
+                <f:selectItem itemValue ="31" itemLabel="Chapter 31"/>
+                <f:selectItem itemValue ="32" itemLabel="Chapter 32"/>
+                <f:selectItem itemValue ="33" itemLabel="Chapter 33"/>
+                <f:selectItem itemValue ="34" itemLabel="Chapter 34"/>
+                <f:selectItem itemValue ="35" itemLabel="Chapter 35"/>
+                <f:selectItem itemValue ="36" itemLabel="Chapter 36"/>
+                <f:selectItem itemValue ="37" itemLabel="Chapter 37"/>
+                <f:selectItem itemValue ="38" itemLabel="Chapter 38"/>
+                <f:selectItem itemValue ="39" itemLabel="Chapter 39"/>
+                <f:selectItem itemValue ="40" itemLabel="Chapter 40"/>
+                <f:selectItem itemValue ="41" itemLabel="Chapter 41"/>
+                <f:selectItem itemValue ="42" itemLabel="Chapter 42"/>
+                <f:selectItem itemValue ="43" itemLabel="Chapter 42"/>
+                <f:selectItem itemValue ="44" itemLabel="Chapter 44"/>
+            </h:selectOneMenu>
+            <h:commandButton value ="Begin Test" action = "#{mcBean.view()}" />
+        </h:form>
+
+        <form action="http://localhost:8080/Sloggy/faces/singleAnswer.xhtml" method="get">
+            <h:panelGrid class = "panelGrid" id = "panel" columns = "2" 
+                         cellpadding = "10" cellspacing = "2" rendered="#{mcBean.renderCondition}">
+
+                <div id="maincontentstyle"  style="margin-top: -1em; text-align : center; color: #edc100">
+                    <div id="boxstyle" style="width: 90%; max-width: 800px; margin-left: auto; margin-right: auto;
+                         text-align: left; border-color: #edc100"></div></div>
+
+                <f:facet name = "header" class="testPane">
+                    <div><h:outputText class = "question" value="#{mcBean.output}" escape="false" styleClass="preformatted" style="display:block;width:800px"/></div>
+                </f:facet>
+                
+                <f:facet name = "footer">
+                    <h:panelGroup style = "display:block; text-align:center">
+                        <h:commandButton id = "submit" value = "Submit" action="#{mcBean.checkOne()}"/>
+                    </h:panelGroup>
+                </f:facet>
+            </h:panelGrid>     
+        </form>
+
+
+
+
+        <!--<p align="center">This quiz is for students to practice. A large number of additional quiz is available for instructors from the Instructor's Resource Website.</p>
+        <table border="1" width="60%" align="center">
+            <tr><td bgcolor="#88c4ff" align="center" escape="false"><b style="font-size: 130%">#{quizSetup.getRequestParameter()}</b></td></tr>
+            <tr><td align="right"><button name="action" value="send" type="submit">Check Answers for All Questions</button></td></tr>
+            <tr><td><h:outputText escape="false" value="#{mcBean.output}"/><br></br></td></tr>
+        </table> -->
+
+        <!--<h:selectManyCheckbox value="">
+            <f:selectItem itemValue="1" itemLabel="Number1 - 1" />
+            <f:selectItem itemValue="2" itemLabel="Number1 - 2" />
+            <f:selectItem itemValue="3" itemLabel="Number1 - 3" />
+        </h:selectManyCheckbox>-->
+
+    </h:body>
+</html>

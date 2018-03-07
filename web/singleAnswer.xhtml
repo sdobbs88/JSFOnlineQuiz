@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <!-- These have to be here for everything to work properly not sure why.-->
+        #{mcBean.getSelectedRadioButtonValue()}
+
+        <h:outputText escape="false" value ="#{mcBean.debug}" />
+
+
+        <div style="text-align: center; margin-bottom: 0em">
+            <h3 style="text-align: center; margin-bottom: 0.2em; color: navy; font-family: Verdana, Helvetica, sans-serif">
+                Introduction to Java Programming, Tenth Edition, 
+                <a href="http://www.cs.armstrong.edu/liang" style="text-decoration: none; color: green">Y. Daniel Liang</a></h3>
+            <link rel="stylesheet" type="text/css" href="http://www.cs.armstrong.edu/liang/common/intro6e.css"></link>
+            <div id="subtabextendline">
+            </div></div>
+    </h:head>
+    <h:body>
+        <form action="http://localhost:8080/Sloggy/faces/HomePage.xhtml" includeViewParams="true"  method="get" >
+            <p align="center">This quiz is for students to practice. A large number of additional quiz is available for instructors from the Instructor's Resource Website.</p>
+
+            <table border="1" width="60%" align="center">
+
+
+                <tr><td bgcolor="#88c4ff" align="center" escape="false"><b style="font-size: 130%">#{quizSetup.chapterList.get(quizSetup.chapterNumber)}</b></td></tr> 
+                <!-- need to add "checked" to whichever answer the user chose, have to edit string somehow....-->
+                <tr style="border-style:hidden;"><td><div style = "text-align: center; color: navy; ">Please send suggestions and error data to Dr. Liang at <a href="mailto:y.daniel.liang@gmail.com" style="text-decoration: none; color: green">y.daniel.liang@gmail.com</a>. <br></br>Indicate which book and edition you are using. <br></br>Thanks!</div>
+                    </td></tr>
+
+
+
+                <tr><td><h:outputText escape="false" value="#{mcBean.getQuestionForButtonPressed()}"/>
+
+
+
+
+                    </td></tr>
+
+            </table>
+
+            <input type="submit" value="Return to Quiz" />          
+            <p align="center">Please use the browsers back button to return to the quiz.</p>
+        </form> 
+
+        <h:form>
+            <h:commandLink value ="Back to Quiz" onclick="history.go(-1)" />
+        </h:form>
+    </h:body>
+</html>
